@@ -1,0 +1,100 @@
+{
+  "name": "Telegram File Sharing Bot",
+  "description": "A powerful Telegram bot for secure file sharing with triple force subscription, batch operations, and comprehensive admin controls.",
+  "repository": "https://github.com/yourusername/file-sharing-bot",
+  "logo": "https://telegra.ph/file/2c546060b20dfd7c1ff2d.jpg",
+  "keywords": [
+    "telegram",
+    "bot",
+    "file-sharing",
+    "force-subscription",
+    "batch-operations",
+    "python",
+    "pyrogram",
+    "mongodb"
+  ],
+  "success_url": "/",
+  "env": {
+    "API_ID": {
+      "description": "Your Telegram API ID from https://my.telegram.org",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Your Telegram API Hash from https://my.telegram.org",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "Your bot token from @BotFather",
+      "required": true
+    },
+    "OWNER_ID": {
+      "description": "Your Telegram user ID (get from @userinfobot)",
+      "required": true
+    },
+    "CHANNEL_ID": {
+      "description": "Database channel ID (negative number like -1001234567890)",
+      "required": true
+    },
+    "FORCE_SUB_CHANNEL_1": {
+      "description": "First force subscription channel ID",
+      "required": true
+    },
+    "FORCE_SUB_CHANNEL_2": {
+      "description": "Second force subscription channel ID",
+      "required": true
+    },
+    "FORCE_SUB_CHANNEL_3": {
+      "description": "Third force subscription channel ID",
+      "required": true
+    },
+    "DATABASE_URL": {
+      "description": "MongoDB connection string",
+      "required": true
+    },
+    "DATABASE_NAME": {
+      "description": "Database name",
+      "value": "file_sharing_bot",
+      "required": false
+    },
+    "ADMINS": {
+      "description": "Space-separated list of admin user IDs",
+      "required": false
+    },
+    "PROTECT_CONTENT": {
+      "description": "Enable content protection (True/False)",
+      "value": "True",
+      "required": false
+    },
+    "AUTO_DELETE_TIME": {
+      "description": "Auto-delete time in seconds (0 to disable)",
+      "value": "3600",
+      "required": false
+    },
+    "JOIN_REQUEST_ENABLED": {
+      "description": "Enable join request feature (True/False)",
+      "value": "False",
+      "required": false
+    },
+    "RUN_WITH_WEB": {
+      "description": "Run with web server (required for Render deployment)",
+      "value": "False",
+      "required": false
+    },
+    "PORT": {
+      "description": "Port for web server (auto-detected on most platforms)",
+      "value": "5000",
+      "required": false
+    }
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "eco"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
