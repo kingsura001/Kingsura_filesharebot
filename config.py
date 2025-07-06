@@ -33,13 +33,7 @@ class Config:
     # Messages Configuration
     START_MESSAGE: str = os.getenv("START_MESSAGE", """
 👋 Hello {mention}!
-
-Welcome to our File Sharing Bot. I can help you access shared files through special links.
-
-🔒 To access files, you must join our 3 required channels first.
-📁 Send me a file link to get started!
-
-Bot maintained by: @YourChannel
+Bot powered by: @Anime_nexuus
 """)
     
     FORCE_SUB_MESSAGE: str = os.getenv("FORCE_SUB_MESSAGE", """
