@@ -67,7 +67,7 @@ class Bot(Client):
     
     async def _verify_channels(self):
         """Verify that all configured channels are accessible"""
-        channels_to_verify = [Config.CHANNEL_ID] + Config.FORCE_SUB_CHANNELS
+        channels_to_verify = [Config.CHANNEL_ID] + Config.FORCE_SUB_CHANNELS()()
         
         for channel_id in channels_to_verify:
             if channel_id == 0:
